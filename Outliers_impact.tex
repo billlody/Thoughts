@@ -1,0 +1,62 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{commath}
+\usepackage{amssymb}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\title{Effects of outliers on Tikhonov regularization}
+\author{Yan Zheng \thanks{funded by Swiss Reinsurance}}
+\date{November 2020}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+What is the impact of outliars to a regularized model when choosing different regularization form?
+\end{abstract}
+
+For ridge regression, the criterion in matrix form,
+\begin{equation}
+\text{RSS} (\lambda)  = (\textbf{y} - \textbf{X} \beta)^{T}(\textbf{y}-\textbf{X} \beta) + \lambda \beta^{T} \beta
+\end{equation}
+And the solution is:
+\begin{equation}
+{\hat{\beta}}^{ridge} = (\textbf{X}^T \textbf{X} + \lambda \textbf{I})^{-1} \textbf{X}^T \textbf{y} = (1 + N \lambda)^{-1} {\hat{\beta}}^{OLS}
+\end{equation}
+where
+\begin{equation}
+{\hat{\beta}}^{OLS}=(\textbf{X}^T \textbf{X})^{-1} \textbf{X}^T y
+\end{equation}
+
+While for \emph{LASSO}, the criterion is:
+\begin{equation}
+\argmin_{\beta} \lbrace \frac{1}{2} \sum^{N}_{i=1} (y_i - \beta_0 - \sum^p_{j=1} x_{ij} \beta_j)^2 + \lambda \sum^p_{j=1} |\beta_j| \rbrace
+\end{equation}
+Its solution in matrix form when the covariates are orthonormal is:
+\begin{equation}
+{\hat{\beta}}^{lasso} = {\hat{\beta}}^{OLS} \max (0, 1 - \frac{N \lambda}{|{\hat{\beta}}^{OLS}|})
+\end{equation}
+
+When an outlier added into the formula, the effect will increase ${\hat{\beta}}^{OLS}$ the same amount in ${\hat{\beta}}^{ridge}$
+and ${\hat{\beta}}^{lasso}$.
+Therefore we only compare $\partial{{\hat{\beta}}^{ridge}} / \partial{{\hat{\beta}}^{OLS}}$ and
+$\partial{{\hat{\beta}}^{lasso}} / \partial{{\hat{\beta}}^{OLS}}$ is enough.
+
+We can easily derive that:
+\begin{equation}
+\begin{aligned}
+\frac{\partial{{\hat{\beta}}^{ridge}}}{\partial{{\hat{\beta}}^{OLS}}} &= \frac{1}{1 + N \lambda} \\
+\frac{\partial{{\hat{\beta}}^{lasso}}}{\partial{{\hat{\beta}}^{OLS}}} &= [0, 1]
+\end{aligned}
+\end{equation}
+
+Ridge regression will be less influenced by outliers compared with \emph{Lasso}.
+
+\end{document}

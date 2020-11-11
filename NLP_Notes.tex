@@ -1,0 +1,80 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{commath}
+\usepackage{amssymb}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\title{NLP notes}
+\author{Yan Zheng \thanks{funded by Swiss Reinsurance}}
+\date{April 2020}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Some notes on NLP
+\end{abstract}
+
+\section{Regular Expression}
+Concepts: regular expression, text normalization, tokenization, lemmatization, sentence segmentation, edit distance
+\begin{itemize}
+	\item regular expression: a language for specifying text search strings
+	\item brackets; caret; question mark(s or nothing); asterisk; Kleene+; anchors; disjunction; false positive and false negative
+	\item Substitution, capture group, 
+	\item Text normalization: tokenizing words, normalizing word formats, segmenting sentences
+	\item byte-pair encoding: continously combine characters with most frequent pair, and replace it with the new merged symbol.
+	\item Sentence Segmentation: punctuations
+	\item Edit distance: for spelling corrections
+\end{itemize}
+
+\section{N-gram language model}
+Concepts: models that assign probabilities to sequences of words are called language models or LMs.
+\begin{itemize}
+	\item relative frequency counts
+	\item evaluation: perplexity, n square root of 1 over joint probability of words sequence
+\end{itemize}
+
+\section{Text summarization}
+\begin{itemize}
+	\item extractive summarization
+	\item abstraction summarization
+	\item ES-intermediate representation: topic representation, indicator representation
+	\item topic rep: frequency-driven approaches, topic word approaches, latent semantic analysis, Bayesian topic model
+	\item indicator rep: describe every sentence as a list of features of importance
+	\item Sentence score: importance score to each sentence
+	\item Summary sentences selection: top-K
+\end{itemize}
+
+Topic Representation Approaches:
+\begin{itemize}
+	\item Topic words
+	\item Frequency-driven approach: TFIDF clustering, using two metrics to decide how relevent or redundancy
+	\item Latent Semantic Analysis: term-sentence matrix, SVD, select sentences for each topic
+	\item Bayesian Topic Models: LDA, BAYESUM
+\end{itemize}
+
+Knowledge Bases and Automatic Summarization:
+\begin{itemize}
+	\item maps sentences to concepts of an antology
+\end{itemize}
+
+Indicator Representation method:
+\begin{itemize}
+	\item Graph Method: PageRank algorithm
+	\item Machine Learning for Summarization
+\end{itemize}
+
+Knowledge Distillation:
+\begin{itemize}
+	\item Big model with powerful generalization, small model try to replicate the big model ability. Put soft targets as objective.
+	\item Calculate MSE of logits in order to optimize the objective function. Equivalent to optimize the cross-entropy with temperature T division on the softmax output.
+\end{itemize}
+
+\end{document}

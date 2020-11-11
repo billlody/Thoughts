@@ -1,0 +1,119 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{commath}
+\usepackage{amssymb}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\title{Reinforcement learning notes}
+\author{Yan Zheng \thanks{funded by Swiss Reinsurance}}
+\date{February 2020}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Reinforcement learning, our hope for the robust intelligence, mimics the way of human learning. Here are some notes regarding it.
+\end{abstract}
+
+\section{MAB(multi-armed bandit) \& Reinforcement learning}
+Some notes on MAB and reinforcement learning
+\begin{itemize}
+  \item Bayesian vs frequentist	
+  \item If the environment can change, we call adaptive adversary setting.
+  \item Otherwise, we call oblivious adversary setting.
+  \item contextual MAB can be appliable in dynamic ad display.
+\end{itemize}
+
+Multi-armed Bandit problems:
+\begin{itemize}
+  \item Sample complexity: to determine the lower bound of expected regret
+  \item Regret: what is the difference between our rewards and a prophet rewards in T time, $R(T) = p^* \cdot 1 \cdot T -  \sum_{t=1}^{T} p_{i(t)} \cdot 1$
+  \item Value function method: average sample strategy on value function evaluation
+  \item Upper-Confidence-Bound action selection: to select actions according to
+  \begin{equation}
+	A_t \doteq \argmax_a \Big [ Q_t (a) + c \sqrt{\frac {\ln t} {N_t (a)}} \Big ]
+  \end{equation}
+  \item Gradient ascent algorithm, an instance of stochastic gradient ascent(robust convergence properties): 
+  \begin{equation}
+	\begin{aligned}
+	\frac{\partial \mathbb{E}[R_t]}{\partial H_t (a)} &= \sum_{x} \pi_t (x) (q_{*}(x) - B_t) \frac {\partial \pi_t (x)} {\partial H_t (a)} / \pi_t (x) \\
+	&= \mathbb{E} \Big [ (q_* (A_t) - B_t) \frac {\partial \pi_t (A_t)} {\partial H_t (a)} / \pi_t (A_t) \Big ] \\
+	&= \mathbb{E} \Big [ (R_t - \overline{R}_t) \frac {\partial \pi_t (A_t)} {\partial H_t (a)} / \pi_t (A_t) \Big ]
+	\end{aligned}
+  \end{equation}
+  \item baseline for GAA affect the variance of the update and the rate of convergence
+  \item Associative search task: trial-and-error learning to search for the best actions
+  \item parameter study: summarize a complete learning curve by its average value over the 1000 steps; this value is proportional to the area under the learning curve.
+  \item Gittins-index approach: Bayesian methods, update distribution after every step, for certain special distributions(called \textit{conjugate priors}), the computations are easy.
+  \item Thompson sampling or posterior sampling: best action according to posterior probability
+\end{itemize}
+
+Markov Decision Process:
+\begin{itemize}
+	\item $p(s^{\prime},r|s,a) \doteq \textrm{Pr} \{ S_t=s^{\prime}, R_t = r | S_{t-1}=s, A_{t-1}=a \}$
+	\item \textit{Markov property}: the state must include information about all aspects of the past agent-environment interaction that make a difference for the future.
+	\item Reward: direct goal, not subgoals
+	\item \textit{episodic tasks}: task with terminal state, followed by a reset to a standard starting state. vs. \textit{continuing tasks}
+	\item \textit{policy}: a mapping from states to probabilities of selecting each possible actions.
+	\item \textit{action-value function for policy $\pi$}
+	\begin{equation}
+	q_{\pi}(s,a) \doteq \mathbb{E}_{\pi} [ G_t | S_t = s,A_t = a] = \mathbb{E}_{\pi} \Big [ \sum_{k=0}^{\infty} \gamma^k R_{t+k+1} \Big | S_t = a, A_t = a \Big ]
+	\end{equation}
+	\item recursive relationships:
+	\begin{equation}
+	\begin{aligned}
+	v_{\pi}(s) &\doteq \mathbb{E}_{\pi} [G_t | S_t = s] \\
+	&= \mathbb{E}_{\pi} [ R_{t+1} + \gamma G_{t+1} | S_t = s] \\
+	&= \sum_a \pi (a|s) \sum_{s^{\prime},r} p(s^{\prime},r|s,a) \big [ r+\gamma v_{\pi} (s^{\prime} ) \big ], \textrm{for all } s \in \mathbb{S}, 
+	\end{aligned} 
+	\end{equation}
+	\item For optimal policy and value functions, we can say $\pi$ is all zero except 1 at the optimal action.
+	\item Three assumptions for solving Bellman equation; many decision-making methods can be viewed as ways of approximately solving the Bellman optimality equation
+		\begin{itemize}
+			\item accurately know the dynamics of the environment
+			\item have enough computational resources
+			\item Markov property 
+		\end{itemize}
+	\item \textit{tabular method}: for small finite state sets, approximate value functions, one entry for each state.
+\end{itemize}
+
+Dynamic programming:
+\begin{itemize}
+	\item definition: compute the optimal policy given a perfect model of the environment as a Markov decision process.
+	\item Policy evaluation: iterative solution methods will converge to value function of state. 
+	\item \textit{Policy improvement theorem}: $q_{\pi}(s, \pi^{\prime} (s)) \geq v_{\pi} (s)$, computation of an improved policy given the value function for that policy.
+	\item \textit{Policy iteration}: policy evaluation and policy improvement.
+	\item \textit{generalized policy iteration}: policy-evaluation and policy-improvement processes interact.
+	\item \textit{bootstrapping}: update estimates on the basis of other estimates.
+\end{itemize}
+
+Monte Carlo method
+\begin{itemize}
+	\item first visit(exclude the first visit) vs every visit
+	\item do not bootstrap; easy to sample when environments dynamics are complex; Monte Carlo diagram shows only those sampled on the one episode; pretty efficient for only
+one or a subset of states
+	\item Assumption of exploring starts
+	\item Open question: Convergence to this optimal fixed point seems inevitable as the changes to the action-value function decrease over time, but has not yet been formally proved
+	\item maintaining exploration: never take some actions, exploring starts - start in a state-action pair; stochastic with a nonzero probability of selecting all actions in each state
+	\item Convergence of Monte Carlo method: exploring starts, policy evaluation could be done with an infinite number of episodes.
+	\item On-policy(soft) vs off-polic method
+	\item Off-policy: target policy and behavior policy, greater variance and slower to converge
+	\item \textit{importance sampling}: a general technique for estimating expected values under one distribution given samples from another.
+\end{itemize}
+
+Temporal-Difference Learning
+
+\section{Authors}
+Fundamental research: Benjamin Van Roy, Lihong Li, Csaba Szepesvari, Nan Jiang, Sham Kakade, Michael Littman, Shipra Agrawals, Chelsea Finn
+
+\section{Symbol system}
+Some notes on symbol system and robust intelligence.
+
+\end{document}

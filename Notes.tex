@@ -1,0 +1,205 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{commath}
+\usepackage{amssymb}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{mathtools}
+
+\title{Notes on machine learning}
+\author{Yan Zheng \thanks{funded by Swiss Reinsurance}}
+\date{March 2020}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This is some notes on machine learning.
+\end{abstract}
+
+\section{Concepts notes}
+
+\begin{enumerate}
+	\item Metric learning: constructing task-specific distance metrics from (weakly) supervised data, in a machine learning manner. The learned distance metric can then be used to perform various tasks(e.g., k-NN classification, clustering, information retrieval).
+\end{enumerate}
+
+\newpage
+
+\section{Leading to robust, human level intelligence}
+
+\subsection{Some notes about hybrid architecture}
+\begin{itemize}
+	\item We cannot construct rich cognitive models in an adequate, automated way without
+the triumvirate of hybrid architecture, rich prior knowledge, and sophisticated
+techniques for reasoning
+	\item We cannot achieve robust intelligence without the capacity to induce and represent rich cognitive models
+\end{itemize}
+
+\subsection{What is the research direction with first priority}
+\begin{itemize}
+	\item hybrid architectures that combine large-scale learning with the representational and computational powers of symbol-manipulation
+	\item large-scale knowledge bases that incorporate symbolic knowledge along with other forms of knowledge
+	\item reasoning mechanismsm capable of leveraging those knowledge bases in tractable ways
+	\item rick cognitive models that work together with those machanisms and knowledge bases
+\end{itemize}
+
+\subsection{Few thoughts}
+\begin{itemize}
+	\item Deep learning has shown us how much can be learned, from massive amounts of data. Co-occurrence statistics and the like may be mere shadows of robust knowledge, but there are sure are a lot of shadows, and maybe we can put those shadows to use, with more sophisticated techniques, so long as we are keenly aware of both their strengths and their limitations.
+	\item CYC shows the potential power of sophisticated reasoning in the presence of rich knowledge bases and rich cognitive models, even if on its own, it is not capable of deriving those models directly from language or perceptual inputs.
+	\item Systems like NS-CL (Mao et al., 2019) show us that symbol manipulation and deep learning can, at least in principle, if not yet at scale, be integrated into a seamless whole that can both perceive and reason.
+\end{itemize}
+
+\emph{one approach to research, which is the one I am 
+calling for, would be to identify a well-motivated set of initial primitives (which might 
+include operations over variables, mechanisms for attention, and so forth) first, and
+then learn about ways of recombining those primitives after, essentially learning what
+constitutes good practice, given those primitives. Only later, once those principles of
+good software engineering were settled, might we go on to immensely complex realworld capabilities}
+
+\subsection{Brains, Minds and Machines}
+\begin{itemize}
+	\item How to characterize intelligence in computational terms?
+	\item Pattern recognition engine(Deep convolutional neural networks)
+	\item Prediction engine: Bayesian networks, causal model, predictive coding, graphical model
+	\item Symbol manipulation engine
+	\item Modeling the world, intelligence is not just about pattern recognition
+	\item Bridging the gap: reverse-engineer how these abilities work in human minds
+	\item build a machine that can learns like a child
+\end{itemize}
+
+Scope:
+\begin{itemize}
+	\item inductive bias: core cognition, the game engine in your head
+	\item learning procedures: child as scientist, child as coder
+\end{itemize}
+
+Common-sense core: physics and psychology.
+The bridge between perception, language, action planning.
+
+Tools:
+\begin{itemize}
+	\item Probabilistic programming languages: Church, Edward, Webppl, Pyro, BayesFlow, ProbTorch, MetaProb, Gen...
+	\item Game engine: open source
+	\item Symbolic languages, probabilistic inference, Hierachical inference, Neural network
+\end{itemize}
+
+\newpage
+
+\section{Mathematics foundation}
+
+\subsection{Reproducible Kernel Hilbert Space}
+
+\begin{itemize}
+	\item every function can be considered as an infinite vector
+	\item binary function can be considered as an infinite matrix
+	\item Kernel: if it satisfy positive definite, symmetry
+	\item It also has eigen function and eigen value: $K(x,y) = \sum_{i=0}^{\infty} \lambda_i \phi_{i}(x) \phi_{i}(y)$, Mercer's theorem
+	\item $ \{ \sqrt{\lambda_i} \phi_i \}_{i=1}^{\infty}$ as a orthogonal basis, any function can be expressed as a linear combination of these basis. $K(x, \cdot)$ can be expressed as the x-th row of that matrix.
+	\item Reproducing: kernel function can be expressed as an inner product of two functions:
+\begin{equation}
+< K(x, \cdot), K(y,\cdot) >_{\mathcal{H}} = \sum_{i=0}^{\infty} \lambda_i \phi_i (x) \phi_i(y) = K(x,y)
+\end{equation}
+	\item Define a map: $\Phi(x) = K(x,\cdot) = (\sqrt{\lambda_1} \phi_1 (x), \sqrt{\lambda_1} \phi_1 (x), ...)^{T}$, map point x into $\mathcal{H}$, so we don't know the exact map or space, if we find a positive definite function, K, there must exist a mapping $\Phi$ and vector space $\mathcal{H}$, this is Kernel trick. $\Phi(x)$ is feature map in $\mathcal{H}$.
+\end{itemize}
+
+More concepts \cite{RKHS_notes}:
+\begin{itemize}
+	\item norm, metric as a notion of distance, convergent and Cauchy sequence.
+	\item Cauchy sequence: convergence with n,m; convergence sequence: convergence to a specific norm. Every convergence seq is Cauchy, but not the opposite.
+	\item Cauchy seq are always bounded.
+	\item Complete space: every Cauchy seq in $\mathcal{X}$ converges: it has a limit, and this limit is in $\mathcal{X}$.
+	\item Banach space, normed vector complete space: it contains the limits of all its Cauchy seqs.
+	\item some useful relations between the norm and the inner product:
+	\begin{align}
+		& \abs{\langle f,g \rangle} \leq \norm{f} \cdot \norm{g} (Cauchy-Schwarz \: inequality) \\
+		& \norm{f+g}^2 + \norm{f-g}^2 = 2 \norm{f}^2 + 2 \norm{g}^2 (the \: parallelogram \: law) \\
+		& 4 \langle , g \rangle = \norm{f+g}^2 - \norm{f-g}^2 (the \: polarization \: identity)
+	\end{align}
+	\item Hilbert space: complete inner product space
+	\item Linear operator: homogeneity, additivity, continuity
+	\item Continuity: for every $\epsilon > 0$, there exist a $\delta = \delta(\epsilon, f_0) > 0$, s.t. 
+	\begin{equation}
+		\norm{f - f_0}_{\mathcal{F}} < \delta \; \textrm{implies} \; \norm{Af - Af_0}_{\mathcal{G}} < \epsilon.
+	\end{equation}
+	uniformly continuous($\delta$ didn't depend on $f$), Lipschitz continuity(strong form of uniformly continuous)
+	\item Operator norm \& Bounded operator:
+	\begin{equation}
+		\norm{A} = \sup_{f \in \mathcal{F}} \frac{\norm{Af}_{\mathcal{G}}}{\norm{f}_{\mathcal{F}}}
+	\end{equation}
+	\item Algebraic dual: if $\mathcal{F}$ is a normed space, then the space $\mathcal{F}^{\prime}$ of linear functionals $A : \mathcal{F} \rightarrow \mathbb{R}$ is called the algebraic dual space of $\mathcal{F}$.
+	\item Topological dual: if $\mathcal{F}$ is a normed space, then the space $\mathcal{F}^{\prime}$ of continuous linear functionals $A : \mathcal{F} \rightarrow \mathbb{R}$ is called the topological dual space of $\mathcal{F}$.
+	\item Riesz representation: \textit{In a Hilbert space ${\mathcal{F}}$, all continous linear functionals are of the form ${\langle \cdot, g \rangle}_{\mathcal{F}}$, for some $g \in \mathcal{F}$.}
+	\item Hilbert space isomorphism: Two Hilbert Spaces $\mathcal{H}$ and $\mathcal{F}$, a linear bijective map $U : \mathcal{H} \rightarrow \mathcal{F}$, which preserves the inner product, i.e., 
+	${\langle h_1, h_2 \rangle}_{\mathcal{H}} = {\langle Uh_1, Uh_2 \rangle}_{\mathcal{F}}$
+	\item Dirac evaluationa functional: Let $\mathcal{H}$ be a Hilbert space of functions $f : \mathcal{X} \rightarrow \mathbb{R}$, defined on a non-empty set $\mathcal{X}$. For a fixed $x \in \mathcal{X}$, map $\delta_x : \mathcal{H} \rightarrow \mathbb{R}$, $\delta_x : f \rightarrow f(x)$. Reproducible kernel Hilbert space, $\delta_x$ is continuous.
+\end{itemize}
+
+Reproducing kernels:
+\begin{itemize}
+	\item $\forall x \in \mathcal{X}, k(\cdot, x) \in \mathcal{H},$
+	\item $\forall x \in \mathcal{X}, \forall f \in \mathcal{H}, {\langle f, k(\cdot, x) \rangle}_{\mathcal{H}} = f(x)$
+	\item more explanations:
+	\begin{itemize}
+		\item any function can be expressed by orthogonal basis on Hilbert space $\mathcal{H}$
+		\begin{equation}
+			f = \sum_{i=1}^{\infty} f_i \sqrt{\lambda_i} \phi_i
+		\end{equation}
+		\item $f = (f_1, f_2, ...)_{\mathcal{H}}^{\mathcal{T}}$
+		\item $K(x,\cdot)$ can be explained as a function with fixed value, x
+		\begin{equation}
+			K(x,\cdot) = \sum_{i=0}^{\infty} {\lambda}_i \phi_i (x) \phi_i
+		\end{equation}
+		with vector in $\mathcal{H}$ as
+		\begin{equation}
+			K(x,\cdot) = (\sqrt{\lambda_1} \phi_1(x), \sqrt{\lambda_2} \phi_2 (x), ...)_{\mathcal{H}}^{\mathcal{T}}
+		\end{equation}
+	\end{itemize}
+	\item Uniqueness of the reproducing kernel
+	\item Positive definite functions
+	\item Moore-Aronszajn theorem: 
+	\textit{Let $k : \mathcal{X} \times \mathcal{X} \rightarrow \mathbb{R}$ be positive definite. There is a unique RKHS $\mathcal{H} \subset {\mathbb{R}}^{\mathcal{X}}$ with reproducing kernel k. Moreover, if space $\mathcal{H}_0 = [\{k(\cdot , x)\}_{x \in \mathcal{X}}]$ is endowed with the inner product}
+	\begin{equation}
+		{\langle f,g \rangle}_{\mathcal{H}_0} = \sum_{i=1}^n \sum_{j=1}^m \alpha_i \beta_j k(y_j, x_i)
+	\end{equation}
+	\textit{where $f=\sum_{i=1}^n \alpha_i k(\cdot, x_i)$ and $g=\sum_{j=1}^m \beta_j k(\cdot, y_j)$, then $\mathcal{H}_0$ is a valid pre-RKHS}
+\end{itemize}
+
+Operations of kernels:
+\begin{itemize}
+	\item Sum of kernels, product of kernels: $k((x, y), (x', y')) \coloneqq k_1(x, x')k_2 (y,y')$
+	\item Polynomial kernel: $k_{poly}(x,x')=(\langle x,x' \rangle +c )^m$, for any polynomial $p(t) = a_m t^m + ... + a_1 t + a_0$ with non-negative coefficients $a_i$, $p(\langle x,x' \rangle)$ defines a valid kernel on $\mathbb{R}^d$.
+	\item Exponential kernel $k_{exp}(x, x')=\exp (2 \sigma \langle x,x' \rangle)$
+	\item Gaussian kernel 
+	\begin{equation}
+		k_{gauss}(x, x')=\exp \left( -\sigma \left[ \norm{x}^2 + \norm{x'}^2 - 2 \langle x,x' \rangle \right] \right) = \exp \left( -\sigma \norm{x-x'}^2 \right)
+	\end{equation}
+	\item Mercer's theorem
+	\begin{equation}
+		k(x,y) = \sum_{j \in J} \lambda_j e_j (x) e_j (y)
+	\end{equation}
+\end{itemize}
+
+\subsection{Fenchel Duality}
+
+\textbf{Convex conjugate and Fenchel duality.} Let $\ell : \mathbb{R}^d \rightarrow \mathbb{R}$, its convex conjugate function is defined as
+\begin{equation}
+	\ell^{*}(u) = \sup_{v \in \mathbb{R}^d} \{ u^\intercal v - \ell (v) \}.
+\end{equation}
+When $\ell$ is proper, convex and lower semicontinuous for any $u$, its conjugate function is also proper, convex and lower semicontinuous. More importantly, the $(\ell, \ell*)$ are dual to each other, \emph{i.e.}, $(\ell^*)^* = \ell$, which is known as Fenchel duality. \cite{Hiriart2012} \cite{Ryan2007}
+
+
+\subsection{Cloud computing notes}
+\begin{itemize}
+	\item Map: takes a set of data and converts it into another set of data, where individual elements are broken down into tuples (key/value)
+	\item Reduce: takes the output from a map as an input and conbines those data tuples into a smaller set of tuples
+	\item Apache Spark: the unified analytics engine, databricks founded in 2013
+	\item Elements: Spark SQL + DataFrames, Streaming Analytics(Spark Streaming), MLlib(Machine Learning), GraphX(Graph Computation), Spark Core API: R, SQL, Python, Scala, Java
+	\item Glint: an asynchronous parameter server for spark, better than default MLlib implementations
+\end{itemize}
+
+\bibliographystyle{unsrt}
+\bibliography{C:/Users/s2mcxp/myref}
+
+\end{document}
