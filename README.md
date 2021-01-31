@@ -26,6 +26,8 @@
 + Machine Learning A Probabilistic Perspective - Kevin P. Murphy
 + The Next Decade in AI: Four Steps Towards Robust Artificial Intelligence - Gary Marcus
 + Algorithms for Convex Optimization - Nisheeth K. Vishnoi
++ 邱锡鹏：《神经网络与深度学习》, https://nndl.github.io/
++ 《自然语言理解斯坦福版本》
 
 ## Technical materials
 + MLlib: Scalable Machine Learning on Spark - Xiangrui Meng, DATABRICKS
@@ -44,6 +46,8 @@
 ### Reinforcement Learning
 + Bayesian Optimization in AlphaGo - DeepMind
 + The Bottleneck Simulator: A Model-based Deep Reinforcement Learning Approach - Yoshua Bengio
+#### Online Learning
++ A Reinforcement Learning Approach to Online Clustering - Aristidis Likas
 
 ### Federated Learning
 + Clustered Federated Learning: Model-Agnostic Distributed Multi-Task Optimization under Privacy Constraints
