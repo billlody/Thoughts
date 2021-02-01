@@ -18,6 +18,7 @@
 
 ### Quant
 + Deep Learning for Stock Prediction Using Numerical and Textual Information
++ Belief Propagation Algorithm for Portfolio Optimization Problems
 
 ## Books
 + Pattern recognition and machine learning - Christopher M.Bishop
@@ -28,6 +29,7 @@
 + Algorithms for Convex Optimization - Nisheeth K. Vishnoi
 + 邱锡鹏：《神经网络与深度学习》, https://nndl.github.io/
 + 《自然语言理解斯坦福版本》
++ http://snap.stanford.edu/proj/snap-icwsm/ - Jure Leskovec
 
 ## Technical materials
 + MLlib: Scalable Machine Learning on Spark - Xiangrui Meng, DATABRICKS
@@ -39,23 +41,46 @@
 + Introduction to RKHS, and some simple kernel algorithms - Arthur Gretton
 + Learning with Augmented Features for Heterogeneous Domain Adaptation - Ivor W. Tsang
 + Transformation Invariance in Pattern Recognition - Tangent Distance and Tangent Propagation
++ The Relationship Between Precision-Recall and ROC Curves - Mark Goadrich
+#### Interpretation
++ Explainable Neural Networks based on Additive Index Models - Vijayan N. Nair
++ Consistent Individualized Feature Attribution for Tree Ensembles - Su-In Lee
++ A Uniﬁed Approach to Interpreting Model Predictions - Su-In Lee
++ Asymmetric Shapley values: incorporating causal knowledge into model-agnostic explainability - Colin Rowat
++ Explainable Machine Learning for Scientific Insights and Discoveries - Jochen Garcke
++ Learning to Explain: An Information-Theoretic Perspective on Model Interpretation - Le Song
++ Shapley Explainability on the Data Manifold - Faculty
++ The Many Shapley Values for Model Explanation - Google
++ True to the Model or True to the Data? - Microsoft Research
++ An Efﬁcient Explanation of Individual Classiﬁcations using Game Theory - Igor Kononenko
++ Understanding Conditional Expectation via Vector Projection(PPT) - Cheng-Shang Chang
++ Explainable AI for Trees: From Local Explanations to Global Understanding - Su-In Lee
 
 ### Gaussian Process
 + Deep Gaussian Processes(PPT) - Maurizio Filippone
++ Dirichlet Processes: A gentle tutorial
++ Recurrent Marked Temporal Point Processes: Embedding Event History to Vector - Le Song
++ SEISMIC: A Self-Exciting Point Process Model for Predicting Tweet Popularity - Jure Leskovec
++ Linking Micro Event History to Macro Prediction in Point Process Models - Le Song
++ Multivariate Bernoulli distribution - Tower Research
 
 ### Reinforcement Learning
 + Bayesian Optimization in AlphaGo - DeepMind
 + The Bottleneck Simulator: A Model-based Deep Reinforcement Learning Approach - Yoshua Bengio
++ Random Expert Distillation: Imitation Learning via Expert Policy Support Estimation - Yiannis Demiris
 #### Online Learning
 + A Reinforcement Learning Approach to Online Clustering - Aristidis Likas
 
-### Federated Learning
+### Transfer Learning
+#### Federated Learning
 + Clustered Federated Learning: Model-Agnostic Distributed Multi-Task Optimization under Privacy Constraints
 + Interpret Federated Learning with Shapley Values - Guan Wang
 + Federated Multi-Task Learning - Ameet Talwalkar
 + Towards Federated Learning at Scale: System Design - Google
-
-### MultiTask 
+#### MultiTask 
++ An Overview of Multi-Task Learning in Deep Neural Networks - Sebastian Ruder
++ Multi-Task Learning for HIV Therapy Screening - Max Planck Institute
++ Identifying beneﬁcial task relations for multi-task learning in deep neural networks - Anders Søgaard
 + An Overview of Multi-Task Learning in Deep Neural Networks - Sebastian Ruder
 
 ### AutoML
@@ -83,6 +108,10 @@
 + Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks - Sergey Levine
 + Few-Shot Adversarial Learning of Realistic Neural Talking Head Models - Samsung AI Center, Moscow
 + Optimization as a Model For Few-Shot Learning - Twitter
++ Zero-Shot Learning with Semantic Output Codes - Tom M. Mitchell
++ A Model of Inductive Bias Learning - Jonathan Baxter
++ Learning to Learn: Model Regression Networks for Easy Small Sample Learning
++ TapNet: Neural Network Augmented with Task-Adaptive Projection for Few-Shot Learning - Jaekyun Moon
 
 ### CV
 + EDVR: Video Restoration with Enhanced Deformable Convolutional Networks - Ke Yu, Chao Dong, Chen Change Loy, CUHK, NTU, SenseTime
@@ -109,6 +138,17 @@
 ### Graph Model
 + An exact mapping between the Variational Renormalization Group and Deep Learning - David J. Schwab
 + Boltzmann Machines - Geoffrey E. Hinton
++ Bayesian Learning for Neural Networks
++ Heat Kernel Based Community Detection - David F. Gleich
++ Deep Graph Attention Model - Xiangnan Kong
++ Relational inductive biases, deep learning, and graph networks - DeepMind & Google Brain
++ Semi-supervised Classification with Graph Convolutional Networks - Max Welling
++ Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering - Pierre Vandergheynst
++ Graph Attention Networks - Yoshua Bengio
++ The Emerging Field of Signal Processing on Graphs - Pierre Vandergheynst
++ Neural Message Passing for Quantum Chemistry - George E. Dahl
++ node2vec: Scalable Feature Learning for Networks - Jure Leskovec
++ Overlapping Community Detection Using Seed Set Expansion - Inderjit S. Dhillon
 #### Geometry Embeddings
 + Neural Embeddings of Graphs in Hyperbolic Space - ICL
 + Hierarchical Representations with Poincaré Variational Auto-Encoders - DeepMind
@@ -116,9 +156,27 @@
 + Low Distortion Delaunay Embedding of Trees in Hyperbolic Plane - Rik Sarkar
 + Poincaré Embeddings for Learning Hierarchical Representations - FAIR
 + Discriminative Embeddings of Latent Variable Models for Structured Data - Le Song
++ DynGEM: Deep Embedding Method for Dynamic Graphs - Yan Liu
++ Hyperbolic Entailment Cones for Learning Hierarchical Embeddings - Thomas Hofmann
++ Graphlets versus node2vec and struc2vec in the task of network alignment - Tijana Milenkovie
++ Tree Edit Distance Learning via Adaptive Symbol Embeddings - Barbara Hammer
++ struc2vec: Learning Node Representations from Structural Identity - Daniel R. Figueiredo
 
 ### Insurance
 + Towards a Smart Smoking Cessation App: A 1D-CNN Model Predicting Smoking Events - Yael Benn
++ Tweedie Gradient Boosting for Extremely Unbalanced Zero-inﬂated Data - Yi Yang
++ Transforming Underwriting in the Life Insurance Industry - Sears Merritt
++ DeepTriangle: A Deep Learning Approach to Loss Reserving - Kevin Kuo
++ Neural Network Embedding of the Over-Dispersed Poisson Reserving Model - Mario V. Wuthrich
++ Autoencoder Regularized Network For Driving Style Representation Learning - Baidu & IBM
++ Bornhuetter-Ferguson as a General Principle of Loss Reserving - Klaus D. Schmidt
++ The Chain Ladder Technique — A Stochastic Model - B Zehnwirth
++ Flexible Tweedie regression models for continuous data - Celestin C. Kokonendji
++ On Gamma Regression Residuals - Hector Zarate
++ Chapter 325: Poisson Regression, NCSS.com
++ 大数据技术与保险精算：用机器学习提升传统精算模型, 孟生旺
++ Reinforcement learning for pricing strategy optimization in the insurance industry - Fernando Fernández
++ EARLY WARNING SYSTEM FOR THE EUROPEAN INSURANCE SECTOR - Petr Jakubik
 
 ### Deep Learning
 + Suffcient Representations for Categorical Variables - Stefan Wager
@@ -132,8 +190,7 @@
 + REGULARIZING NEURAL NETWORKS BY PENALIZING CONFIDENT OUTPUT DISTRIBUTIONS - Geoffrey Hinton
 + A Simple Weight Decay Can Improve Generalization - John A. Hertz
 + Recurrent Neural Network Regularization - Google Brain
-#### Interpretation
-+ Explainable Neural Networks based on Additive Index Models - Vijayan N. Nair
++ Learning K-way D-dimensional Discrete Codes for Compact Embedding Representations - Yizhou Sun
 #### Spurious Relationship
 + Domain-Adversarial Training of Neural Networks - Victor Lempitsky
 + Invariant Risk Minimization - David Lopez-Paz
@@ -149,8 +206,14 @@
 + Highway Networks - J¨urgen Schmidhuber
 #### Knowledge distilling
 + Distilling the Knowledge in a Neural Network - Jeff Dean, Google
++ Distilling a Neural Network Into a Soft Decision Tree - Geoﬀrey Hinton, Google
 #### Label Noise
 + Conﬁdent Learning: Estimating Uncertainty in Dataset Labels - MIT & Google
++ Toward Robustness against Label Noise in Training Deep Discriminative Neural Networks - Arash Vahdat
++ L_DMI: A Novel Information-theoretic Loss Function for Training Deep Nets Robust to Label Noise - PKU
++ Deep Learning is Robust to Massive Label Noise - Nir Shavit
++ Combating Label Noise in Deep Learning Using Abstention - Jamaludin Mohd-Yusof
++ Fast Rates for a kNN Classiﬁer Robust to Unknown Asymmetric Label Noise - Ata Kab´an
 #### Differential Geometry
 + Hyperbolic Neural Networks - Thomas Hofmann
 + Geometric deep learning: going beyond Euclidean data - Pierre Vandergheynst
@@ -165,11 +228,20 @@
 + Near Optimal Frequent Directions for Sketching Dense and Sparse Matrices - Zengfeng Huang
 + Optimal Algorithms for Non-Smooth Distributed Optimization in Networks - Microsoft
 + Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses to Adversarial Examples - David Wagner
++ Generative Adversarial Nets - Yoshua Bengio
++ Rates of Convergence for Sparse Variational Gaussian Process Regression - Mark van der Wilk
+#### Metric learning
++ Exact Matrix Completion via Convex Optimization - Benjamin Recht
++ Stochastic gradient descent on Riemannian manifolds
++ The Relationship Between Precision-Recall and ROC Curves - Mark Goadrich
++ Thesis: On Structured Matrix Optimization With Two Applications In Statistics - Ting Yuan
 
 ### Semi-supervised
 + Semi-Supervised AUC Optimization without Guessing Labels of Unlabeled Data - Ming Li
++ Attention-based Graph Neural Network for Semi-supervised Learning - Google
 ### Unsupervised
 + Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations - Olivier Bachem
++ Bayesian Hierarchical Clustering - Zoubin Ghahramani
 ### Fairness
 + Delayed Impact of Fair Machine Learning - Moritz Hardt
 
