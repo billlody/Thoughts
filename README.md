@@ -15,6 +15,7 @@
 + Learning to Rank: From Pairwise Approach to Listwise Approach - MSRA
 + Deep Coevolutionary Network: Embedding User and Item Features for Recommendation - Le Song
 + TEM: Tree-enhanced Embedding Model for Explainable Recommendation
++ Graph Convolutional Neural Networks for Web-Scale Recommender Systems - Jure Leskovec
 
 ### Quant
 + Deep Learning for Stock Prediction Using Numerical and Textual Information
@@ -30,10 +31,17 @@
 + 邱锡鹏：《神经网络与深度学习》, https://nndl.github.io/
 + 《自然语言理解斯坦福版本》
 + http://snap.stanford.edu/proj/snap-icwsm/ - Jure Leskovec
++ Information propagation in complex networks
++ From Knowledge Graph Embedding to Ontology Embedding: Region Based Representations of Relational Structures - Steven Schockaert
++ Factor Graphs and the Sum-Product Algorithm - Frank R. Kschischang, Hans-Andrea Loeliger
++ FAST-PPR: Personalized PageRank Estimation for Large Graphs(PPT)
++ Tutorial: Probabilistic Graphical Models, PGM lecture notes: pseudo-likelihood - David Sontag
 
 ## Technical materials
 + MLlib: Scalable Machine Learning on Spark - Xiangrui Meng, DATABRICKS
 + CUDA C/C++ Basics Supercomputing 2011 Tutorial - Cyril Zeller, NVIDIA Corporation
++ Scaling Distributed Machine Learning with the Parameter Server - Google, Baidu
++ Lectures: TensorFlow for Deep Learning Research, CS20SI
 
 ## Papers
 ### Traditional Machine Learning
@@ -42,6 +50,7 @@
 + Learning with Augmented Features for Heterogeneous Domain Adaptation - Ivor W. Tsang
 + Transformation Invariance in Pattern Recognition - Tangent Distance and Tangent Propagation
 + The Relationship Between Precision-Recall and ROC Curves - Mark Goadrich
++ The Expectation Maximization Algorithm A short tutorial
 #### Interpretation
 + Explainable Neural Networks based on Additive Index Models - Vijayan N. Nair
 + Consistent Individualized Feature Attribution for Tree Ensembles - Su-In Lee
@@ -68,10 +77,30 @@
 + Bayesian Optimization in AlphaGo - DeepMind
 + The Bottleneck Simulator: A Model-based Deep Reinforcement Learning Approach - Yoshua Bengio
 + Random Expert Distillation: Imitation Learning via Expert Policy Support Estimation - Yiannis Demiris
++ RL2 : FAST REINFORCEMENT LEARNING VIA SLOW REINFORCEMENT LEARNING - OpenAI
 #### Online Learning
 + A Reinforcement Learning Approach to Online Clustering - Aristidis Likas
 
 ### Transfer Learning
++ A Uniﬁed Framework for Metric Transfer Learning - Hengjie Song
++ Transfer Learning via Learning to Transfer - Qiang Yang
++ Learning to Model the Tail - Martial Hebert
++ Transfer Learning via Dimensionality Reduction - Qiang Yang
++ Domain-Adversarial Training of Neural Networks - Victor Lempitsky
++ A Survey on Deep Transfer Learning - Chunfang Liu
++ Modeling Transfer Relationships Between Learning Tasks for Improved Inductive Transfer - Terran Lane
++ Boosting for Regression Transfer - Peter Stone
++ To Transfer or Not To Transfer - Leslie Pack Kaelbling
++ Label Efﬁcient Learning of Transferable Representations across Domains and Tasks - Li Fei-Fei
++ Multi-Label Classification: An Overview - Ioannis Katakis
++ Manifold Alignment using Procrustes Analysis - Sridhar Mahadevan
++ Kernel-Based Inductive Transfer - Stefan Kramer
++ A Survey on Transfer Learning - Qiang Yang
++ Transfer Learning - Jude Shavlik
++ Relational Macros for Transfer in Reinforcement Learning - Richard Maclin
++ Boosting for Transfer Learning - Qiang Yang
++ Transferring Naive Bayes Classiﬁers for Text Classiﬁcation - Qiang Yang
++ An Experts Algorithm for Transfer Learning - Satinder Singh
 #### Federated Learning
 + Clustered Federated Learning: Model-Agnostic Distributed Multi-Task Optimization under Privacy Constraints
 + Interpret Federated Learning with Shapley Values - Guan Wang
@@ -112,6 +141,7 @@
 + A Model of Inductive Bias Learning - Jonathan Baxter
 + Learning to Learn: Model Regression Networks for Easy Small Sample Learning
 + TapNet: Neural Network Augmented with Task-Adaptive Projection for Few-Shot Learning - Jaekyun Moon
++ META LEARNING SHARED HIERARCHIES - OpenAI
 
 ### CV
 + EDVR: Video Restoration with Enhanced Deformable Convolutional Networks - Ke Yu, Chao Dong, Chen Change Loy, CUHK, NTU, SenseTime
@@ -134,6 +164,22 @@
 + A Fast and Accurate Dependency Parser using Neural Networks - Christopher D. Manning
 + Generating Sequences With Recurrent Neural Networks - Alex Graves
 + A Critical Review of Recurrent Neural Networks for Sequence Learning - Charles Elkan
++ Latent Dirichlet Allocation(LDA) - Michael I. Jordan
++ An Introduction to Variational Methods for Graphical Models - Michael I. Jordan
+#### Knowledge Graph
++ Variational Knowledge Graph Reasoning - William Yang Wang
++ Probabilistic Embedding of Knowledge Graphs with Box Lattice Measures - Andrew McCallum
++ Understanding Belief Propagation and its Generalizations - Yair Weiss
++ Concept-Oriented Deep Learning - Daniel T. Chang
++ Chapter: An Introduction to Conditional Random Fields for Relational Learning
++ Scalable Probabilistic Databases with Factor Graphs and MCMC - Gerome Miklau
++ Rethinking Knowledge Graph Propagation for Zero-Shot Learning - Eric P. Xing
++ Learning Graphs from Data: A Signal Representation Perspective - Pascal Frossard
++ Knowledge Base Completion via Coupled Path Ranking - Chin-Yew Lin
++ Information Propagation in Interaction Networks - Toon Calders
++ Mining Knowledge Graphs from Text - Sameer Singh
++ Survey of Markov Logic Networks - Dengdi Liu
++ 路径张量分解的知识图谱推理算法
 
 ### Graph Model
 + An exact mapping between the Variational Renormalization Group and Deep Learning - David J. Schwab
@@ -149,6 +195,8 @@
 + Neural Message Passing for Quantum Chemistry - George E. Dahl
 + node2vec: Scalable Feature Learning for Networks - Jure Leskovec
 + Overlapping Community Detection Using Seed Set Expansion - Inderjit S. Dhillon
++ SNARE: A Link Analytic System for Graph Labeling and Risk Detection - Christos Faloutsos
++ Constructing Free Energy Approximations and Generalized Belief Propagation Algorithms - Yair Weiss
 #### Geometry Embeddings
 + Neural Embeddings of Graphs in Hyperbolic Space - ICL
 + Hierarchical Representations with Poincaré Variational Auto-Encoders - DeepMind
@@ -165,7 +213,7 @@
 ### Insurance
 + Towards a Smart Smoking Cessation App: A 1D-CNN Model Predicting Smoking Events - Yael Benn
 + Tweedie Gradient Boosting for Extremely Unbalanced Zero-inﬂated Data - Yi Yang
-+ Transforming Underwriting in the Life Insurance Industry - Sears Merritt
++ Transforming Underwriting in the Life Insurance Industry - Sears Merritt, MassMutual
 + DeepTriangle: A Deep Learning Approach to Loss Reserving - Kevin Kuo
 + Neural Network Embedding of the Over-Dispersed Poisson Reserving Model - Mario V. Wuthrich
 + Autoencoder Regularized Network For Driving Style Representation Learning - Baidu & IBM
@@ -191,6 +239,8 @@
 + A Simple Weight Decay Can Improve Generalization - John A. Hertz
 + Recurrent Neural Network Regularization - Google Brain
 + Learning K-way D-dimensional Discrete Codes for Compact Embedding Representations - Yizhou Sun
++ Auto-Encoding Variational Bayes(PPT, paper) - Max Welling
++ Variational Lossy Autoencoder - OpenAI
 #### Spurious Relationship
 + Domain-Adversarial Training of Neural Networks - Victor Lempitsky
 + Invariant Risk Minimization - David Lopez-Paz
@@ -230,6 +280,7 @@
 + Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses to Adversarial Examples - David Wagner
 + Generative Adversarial Nets - Yoshua Bengio
 + Rates of Convergence for Sparse Variational Gaussian Process Regression - Mark van der Wilk
+
 #### Metric learning
 + Exact Matrix Completion via Convex Optimization - Benjamin Recht
 + Stochastic gradient descent on Riemannian manifolds
@@ -239,6 +290,7 @@
 ### Semi-supervised
 + Semi-Supervised AUC Optimization without Guessing Labels of Unlabeled Data - Ming Li
 + Attention-based Graph Neural Network for Semi-supervised Learning - Google
++ SEMI-SUPERVISED KNOWLEDGE TRANSFER FOR DEEP LEARNING FROM PRIVATE TRAINING DATA - Google Brain
 ### Unsupervised
 + Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations - Olivier Bachem
 + Bayesian Hierarchical Clustering - Zoubin Ghahramani
@@ -247,4 +299,22 @@
 
 ### Survival Analysis
 + Machine Learning for Survival Analysis(PPT) - Chandan K. Reddy(VirginiaTech)
++ A Review on Accelerated Failure Time Models - Manash Pratim Barman
++ The Brier Score under Administrative Censoring: Problems and Solutions - Havard Kvamme
++ Active Learning based Survival Regression for Censored Data
++ Continuous and Discrete-Time Survival Prediction with Neural Networks - Havard Kvamme
++ DeepHit: A Deep Learning Approach to Survival Analysis with Competing Risks - Mihaela van der Schaar
++ Deep Recurrent Survival Analysis - Yong Yu
++ DeepSurv: Personalized Treatment Recommender System Using A Cox Proportional Hazards Deep Neural Network - Yuval Kluger
++ A Scalable Discrete-Time Survival Model for Neural Networks - Balasubramanian Narasimhan
++ Optimal Survival Trees - Agni Orfanoudaki
++ Deep Survival Analysis - David Blei
++ A General Machine Learning Framework for Survival Analysis - Bernd Bischl
++ Random Survival Forests - Michael S. Lauer
++ Regularized Parametric Regression for High-dimensional Survival Analysis - Chandan K. Reddy
++ Machine Learning for Survival Analysis(PPT) - Yan Li
++ A review of survival trees - Hatem Ben-Ameur
++ Time-to-Event Prediction with Neural Networks and Cox Regression - Havard Kvamme
+
 ## Others
++ Supervising strong learners by amplifying weak experts - OpenAI
