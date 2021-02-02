@@ -36,6 +36,7 @@
 + Factor Graphs and the Sum-Product Algorithm - Frank R. Kschischang, Hans-Andrea Loeliger
 + FAST-PPR: Personalized PageRank Estimation for Large Graphs(PPT)
 + Tutorial: Probabilistic Graphical Models, PGM lecture notes: pseudo-likelihood - David Sontag
++ Speech and Language Processing An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition - Daniel Jurafsky
 
 ## Technical materials
 + MLlib: Scalable Machine Learning on Spark - Xiangrui Meng, DATABRICKS
@@ -156,7 +157,9 @@
 + Focal Loss for Dense Object Detection - FAIR
 + Training Region-based Object Detectors with Online Hard Example Mining - FAIR
 + Prime Sample Attention in Object Detection - Chen Change Loy, Dahua Lin
-
++ Extractive Summarization as Text Matching - Xuanjing Huang
++ Learning to Extract Coherent Summary via Deep Reinforcement Learning - Baotian Hu
++ Text Summarization Techniques: A Brief Survey - Krys Kochut
 ### NLP
 + Sequence to Sequence Learning with Neural Networks - Google
 + BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding - Google AI Language
@@ -166,6 +169,23 @@
 + A Critical Review of Recurrent Neural Networks for Sequence Learning - Charles Elkan
 + Latent Dirichlet Allocation(LDA) - Michael I. Jordan
 + An Introduction to Variational Methods for Graphical Models - Michael I. Jordan
++ High Performance NLP: bit.ly/2SmhKY7
++ To Tune or Not to Tune? Adapting Pretrained Representations to Diverse Tasks - Noah A. Smith
++ Dynamic Topic Models - John D. Lafferty
++ Making Monolingual Sentence Embeddings Multilingual using Knowledge Distillation - Iryna Gurevych
++ A Theoretical andPractical Implementation Tutorial on Topic Modeling and Gibbs Sampling - William M. Darling
++ Sequential latent Dirichlet allocation - Changyou Chen
++ Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks - Iryna Gurevych
++ Attention Is All You Need - Google Brain
++ BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding - Kristina Toutanova
++ Leveraging BERT for Extractive Text Summarization on Lectures - Derek Miller
++ ROUGE: A Package for Automatic Evaluation of Summaries - Chin-Yew Lin
++ PEGASUS: Pre-training with Extracted Gap-sentences for Abstractive Summarization - Peter J. Liu
++ Multi-Document Summarization using Sentence-based Topic Models - Yihong Gong
++ Generic Text Summarization Using Relevance Measure and Latent Semantic Analysis - Xin Liu
++ Fine-tune BERT for Extractive Summarization - Yang Liu
++ Survey of the State of the Art in Natural Language Generation: Core tasks, applications and evaluation - Emiel Krahmer
++ ERNIE: Enhanced Representation through Knowledge Integration - Baidu
 #### Knowledge Graph
 + Variational Knowledge Graph Reasoning - William Yang Wang
 + Probabilistic Embedding of Knowledge Graphs with Box Lattice Measures - Andrew McCallum
