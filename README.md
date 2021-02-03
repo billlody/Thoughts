@@ -16,10 +16,15 @@
 + Deep Coevolutionary Network: Embedding User and Item Features for Recommendation - Le Song
 + TEM: Tree-enhanced Embedding Model for Explainable Recommendation
 + Graph Convolutional Neural Networks for Web-Scale Recommender Systems - Jure Leskovec
++ Facing Imbalanced Data Recommendations for the Use of Performance Metrics - Fernando De La Torre
++ Reproducing kernel Hilbert spaces in Machine Learning - Arthur Gretton
++ From RankNet to LambdaRank to LambdaMART: An Overview - Microsoft Research
++ IR evaluation methods for retrieving highly relevant documents - Jaana Kekiiliinen
 
 ### Quant
 + Deep Learning for Stock Prediction Using Numerical and Textual Information
 + Belief Propagation Algorithm for Portfolio Optimization Problems
++ Technological Links and Predictable Returns - Ran Zhang
 
 ## Books
 + Pattern recognition and machine learning - Christopher M.Bishop
@@ -37,12 +42,20 @@
 + FAST-PPR: Personalized PageRank Estimation for Large Graphs(PPT)
 + Tutorial: Probabilistic Graphical Models, PGM lecture notes: pseudo-likelihood - David Sontag
 + Speech and Language Processing An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition - Daniel Jurafsky
++ Reinforcement Learning: An Introduction - Andrew G. Barto
++ Convex Optimization - Stephen Boyd
++ Convex Optimization: Algorithms and Complexity - Sébastien Bubeck
++ Mathematical Principles of Fuzzy Logic - Jiri Mockor
 
 ## Technical materials
 + MLlib: Scalable Machine Learning on Spark - Xiangrui Meng, DATABRICKS
 + CUDA C/C++ Basics Supercomputing 2011 Tutorial - Cyril Zeller, NVIDIA Corporation
 + Scaling Distributed Machine Learning with the Parameter Server - Google, Baidu
 + Lectures: TensorFlow for Deep Learning Research, CS20SI
++ Meltdown - Mike Hamburg
++ An Architecture for Parallel Topic Models
++ Spectre Attacks: Exploiting Speculative Execution - Yuval Yarom
++ Trinity: A Distributed Graph Engine on a Memory Cloud
 
 ## Papers
 ### Traditional Machine Learning
@@ -52,6 +65,31 @@
 + Transformation Invariance in Pattern Recognition - Tangent Distance and Tangent Propagation
 + The Relationship Between Precision-Recall and ROC Curves - Mark Goadrich
 + The Expectation Maximization Algorithm A short tutorial
++ A Tutorial on MM Algorithms - Kenneth Lange
++ L2P: An Algorithm for Estimating Heavy-tailed Outcomes - Tina Eliassi-Rad
++ Causal inference in statistics: An overview - Judea Pearl
++ LightGBM: A Highly Efﬁcient Gradient Boosting Decision Tree - MSRA
++ Conﬁdence Intervals for the binomial parameter p
++ Confidence Bounds & Intervals for Parameters Relating to the Binomial, Negative Binomial, Poisson and Hypergeometric Distributions
++ Regression shrinkage and selection via the lasso: a retrospective - Robert Tibshirani
++ Algorithms for Non-negative Matrix Factorization - H. Sebastian Seung
++ Greedy Function Approximation: A Gradient Boosting Machine - Jerome H. Friedman
++ Chapter 1: GENERATIVE AND DISCRIMINATIVE CLASSIFIERS: NAIVE BAYES AND LOGISTIC REGRESSION
++ The Bayesian Lasso - George Casella
++ PPT: The Bayesian Lasso - Rebecca C. Steorts 
++ AdaBoost
++ Accurate Intelligible Models with Pairwise Interactions - Giles Hooker
++ COS 511: Theoretical Machine Learning
++ XGBoost: A Scalable Tree Boosting System - Tianqi Chen
++ SMOTE: Synthetic Minority Over-sampling Technique - W. Philip Kegelmeyer
++ Introduction to RKHS - Gatsby Unit, CSML, UCL
++ The Expectation Maximization Algorithm A short tutorial - Sean Borman
++ On-line outlier detection and data cleaning - Wei Jiang
++ Outlier-Tolerant Kalman Filter of  State Vectors in Linear Stochastic System - SUN Guoji
++ Forecasting at Scale - Benjamin Letham
++ Building ARIMA and ARIMAX Models for Predicting Long-Term Disability Benefit Application Rates in the Public/Private Sectors - Bruce H. Andrews
++ A geometric view on Pearson’s correlation coefﬁcient and a generalization of it to non-linear dependencies - Priyantha Wijayatunga
++ Simultaneous feature selection and classiﬁcation using kernel-penalized support vector machines - Jayanta Basak
 #### Interpretation
 + Explainable Neural Networks based on Additive Index Models - Vijayan N. Nair
 + Consistent Individualized Feature Attribution for Tree Ensembles - Su-In Lee
@@ -73,6 +111,29 @@
 + SEISMIC: A Self-Exciting Point Process Model for Predicting Tweet Popularity - Jure Leskovec
 + Linking Micro Event History to Macro Prediction in Point Process Models - Le Song
 + Multivariate Bernoulli distribution - Tower Research
++ Rates of Convergence for Sparse Variational Gaussian Process Regression - Mark van der Wilk
++ Gaussian Process Inference for Estimating Pharmacokinetic Parameters of Dynamic Contrast-Enhanced MR Images - Ronald M. Summers
+#### Books
++ A Practical Guide to Gaussian Processes - Mark van der Wilk
++ A tutorial on Gaussian process regression: Modelling, exploring, and exploiting functions - Andreas Krause
++ BAYESIAN FILTERING AND SMOOTHING - Simo S¨arkk¨a
++ Gaussian Processes for Machine Learning - Thomas Dietterich
++ Gaussian Processes(tutorial) - Daniel McDuﬀ, MIT Media Lab
++ Stochastic Differential Equation Methods for Spatio-Temporal Gaussian  Process Regression - Arno Solin 
+#### Deep GPs
++ Thesis: Deep Gaussian Processes and Variational Propagation of Uncertainty
++ Deep Gaussian Processes for Regression using Approximate Expectation Propagation - Richard E. Turner
++ Doubly Stochastic Variational Inference for Deep Gaussian Processes - Marc Peter Deisenroth
++ How Deep Are Deep Gaussian Processes? - A.L. Teckentrup
++ Neural Processes - Yee Whye Teh
+#### Latent Variable GPs
++ A Unifying Framework for Gaussian Process Pseudo-Point Approximations using Power Expectation Propagation - Richard E. Turner
++ Bayesian Gaussian Process Latent Variable Model - Neil D. Lawrence
++ Probabilistic Non-linear Principal Component Analysis with Gaussian Process Latent Variable Models - Neil Lawrence
+#### State Space GPs
++ Identiﬁcation of Gaussian Process State Space Models - James Hensman
++ Inﬁnite-Horizon Gaussian Processes - Richard E. Turner
++ State-Space Inference and Learning with Gaussian Processes - Carl Edward Rasmussen
 
 ### Reinforcement Learning
 + Bayesian Optimization in AlphaGo - DeepMind
@@ -81,6 +142,56 @@
 + RL2 : FAST REINFORCEMENT LEARNING VIA SLOW REINFORCEMENT LEARNING - OpenAI
 + Reinforced Co-Training - William Yang Wang
 + Robust Distant Supervision Relation Extraction via Deep Reinforcement Learning - William Yang Wang
++ Behaviour Suite for Reinforcement Learning - DeepMind
++ A Tutorial on Thompson Sampling - Zheng Wen
++ Gradient Surgery for Multi-Task Learning - Chelsea Finn
++ Ensemble Sampling - Benjamin Van Roy
++ Suphx: Mastering Mahjong with Deep Reinforcement Learning - MSRA
++ What is an RKHS? - Arthur Gretton
++ Deep Exploration via Randomized Value Functions - Zheng Wen
++ IMPLEMENTATION MATTERS IN DEEP POLICY GRADIENTS: A CASE STUDY ON PPO AND TRPO
++ Playing Atari with Deep Reinforcement Learning - DeepMind
++ Trust Region Policy Optimization - Michael Jordan
++ Efﬁcient Bayesian Clustering for Reinforcement Learning - Zoran Popovie
++ Hierarchical clustering with deep Q-learning
++ Semi-Unsupervised Clustering Using Reinforcement Learning - Manfred Huber
++ Apprenticeship Learning via Inverse Reinforcement Learning - Andrew Y. Ng
++ K-Means Clustering based Reinforcement Learning Algorithm for Automatic Control in Robots - Yan Zhai
++ Curiosity-driven Exploration by Self-supervised Prediction - Trevor Darrell
++ Decision Aid Methodologies In Transportation - Chen Jiang Hang
++ Evolution Strategies as a Scalable Alternative to Reinforcement Learning - OpenAI
++ Learning Tetris Using the Noisy Cross-Entropy Method
++ Vector-based Navigation using Grid-like Representations in Artiﬁcial Agents - DeepMind
++ Composable Deep Reinforcement Learning for Robotic Manipulation - OpenAI
++ Sample Efficient Actor-Critic with Experience Replay - DeepMind
++ Hindsight Experience Replay - OpenAI
++ Generative Adversarial Imitation Learning - Stefano Ermon
++ Scalable trust-region method for deep reinforcement learning using Kronecker-factored approximation - Jimmy Ba
++ Data-Efﬁcient Reinforcement Learning in Continuous-State POMDPs - Carl Rasmussen
++ End-to-End Training of Deep Visuomotor Policies - Pieter Abbeel
++ Learning to Act by Predicting the Future - Intel Labs
++ A Natural Policy Gradient - Sham Kakade 
++ Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning - Ronald J. Williams
++ Asynchronous Methods for Deep Reinforcement Learning
++ Memory-based control with recurrent neural networks - DeepMind
++ Continuous Control with Deep Reinforcement Learning - DeepMind
++ Proximal Policy Optimization Algorithms - OpenAI
++ Policy Gradient Methods for Reinforcement Learning with Function Approximation - AT&T Labs
++ Mastering the Game of Go without Human Knowledge - DeepMind
++ End-to-End Training of Deep Visuomotor Policies - Pieter Abbeel
++ StarCraft II: A New Challenge for Reinforcement Learning - DeepMind
++ Structure Learning in Motor Control: A Deep Reinforcement Learning Model - DeepMind
++ Programmable Agents - DeepMind
++ Reinforcement Learning with Unsupervised Auxiliary Tasks - DeepMind
++ Neural Episodic Control - Google
++ Mastering the game of Go with deep neural networks and tree search - DeepMind
++ NERVENET: LEARNING STRUCTURED POLICY WITH GRAPH NEURAL NETWORKS
++ MuJoCo: A physics engine for model-based control - University of Washington
++ Conjugate Gradient Method - Prof.S.Boyd tutorial
++ Learning values across many orders of magnitude - DeepMind
++ Layer Normalization - Google
++ A Log-Linear Model for Unsupervised Text Normalization - Jacob Eisenstein
++ A Deep Reinforcement Learning Framework for the Financial Portfolio Management Problem - Jinjun Liang
 #### Online Learning
 + A Reinforcement Learning Approach to Online Clustering - Aristidis Likas
 
@@ -114,6 +225,7 @@
 + Multi-Task Learning for HIV Therapy Screening - Max Planck Institute
 + Identifying beneﬁcial task relations for multi-task learning in deep neural networks - Anders Søgaard
 + An Overview of Multi-Task Learning in Deep Neural Networks - Sebastian Ruder
++ A Survey on Multi-Task Learning - Qiang Yang
 
 ### AutoML
 + Sequential Model-Based Optimization for General Algorithm Conﬁguration(extended version) - Kevin Leyton-Brown
@@ -135,6 +247,9 @@
 + Progressive Neural Architecture Search(PPT)
 + NEURAL ARCHITECTURE SEARCH WITH REINFORCEMENT LEARNING - Google Brain
 + AdaNet: Adaptive Structural Learning of Artiﬁcial Neural Networks - Scott Yang
++ Neural Optimizer Search with Reinforcement Learning - Google Brain
++ Advanced Model Learning - Chelsea Finn(Tutorial)
++ https://simons.berkeley.edu/workshops/abstracts/14378#talk-16132
 
 ### Meta Learning
 + Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks - Sergey Levine
@@ -220,6 +335,7 @@
 + DeepPath: A Reinforcement Learning Method for Knowledge Graph Reasoning - William Yang Wang
 + Deep Reinforcement Learning for NLP - William Yang Wang
 + Learning Deep Structured Semantic Models for Web Search using Clickthrough Data - Microsoft Research
++ Know-Evolve: Deep Temporal Reasoning for Dynamic Knowledge Graphs - Le Song
 
 ### Graph Model
 + An exact mapping between the Variational Renormalization Group and Deep Learning - David J. Schwab
@@ -265,6 +381,7 @@
 + 大数据技术与保险精算：用机器学习提升传统精算模型, 孟生旺
 + Reinforcement learning for pricing strategy optimization in the insurance industry - Fernando Fernández
 + EARLY WARNING SYSTEM FOR THE EUROPEAN INSURANCE SECTOR - Petr Jakubik
++ Experience Studies on Determining Life Premium Insurance Ratings: Practical Approaches - Narcis Eduard MITU
 
 ### Deep Learning
 + Suffcient Representations for Categorical Variables - Stefan Wager
@@ -281,6 +398,7 @@
 + Learning K-way D-dimensional Discrete Codes for Compact Embedding Representations - Yizhou Sun
 + Auto-Encoding Variational Bayes(PPT, paper) - Max Welling
 + Variational Lossy Autoencoder - OpenAI
++ Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift - Google
 #### Spurious Relationship
 + Domain-Adversarial Training of Neural Networks - Victor Lempitsky
 + Invariant Risk Minimization - David Lopez-Paz
@@ -320,7 +438,9 @@
 + Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses to Adversarial Examples - David Wagner
 + Generative Adversarial Nets - Yoshua Bengio
 + Rates of Convergence for Sparse Variational Gaussian Process Regression - Mark van der Wilk
-
++ An Entropy Search Portfolio for Bayesian Optimization - Nando de Freitas
++ Variational Inference: A Review for Statisticians - David M. Blei
++ Variational free energy and the Laplace approximation - Will Penny
 #### Metric learning
 + Exact Matrix Completion via Convex Optimization - Benjamin Recht
 + Stochastic gradient descent on Riemannian manifolds
@@ -358,3 +478,11 @@
 
 ## Others
 + Supervising strong learners by amplifying weak experts - OpenAI
++ Kullback-Leibler distance as a measure of the information ﬁltered from multivariate data - Rosario N. Mantegna
++ The Kullback–Leibler Divergence as an Estimator of the Statistical Properties of CMB Maps - Andrew D. Jackson
++ Maximal Information Coefficient: An Introduction to Information Theory
++ Traffic Flow Forecasting Method based on Gradient Boosting Decision Tree - CHEN Jungang
++ Using Information Entropy to Measure Bond Risk: An Empirical Investigation - Mei Yu
++ Blind Source Separation: Fundamentals and Recent Advances - Eleftherios Koﬁdis
++ Autoregressive with Exogenous Variables and Neural Network Short-Term Load Forecast Models for Residential Low Voltage Distribution Networks - Junwei Lu
++ Multi-View Learning in the Presence of View Disagreement - Trevor Darrell
