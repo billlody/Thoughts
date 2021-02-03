@@ -79,6 +79,8 @@
 + The Bottleneck Simulator: A Model-based Deep Reinforcement Learning Approach - Yoshua Bengio
 + Random Expert Distillation: Imitation Learning via Expert Policy Support Estimation - Yiannis Demiris
 + RL2 : FAST REINFORCEMENT LEARNING VIA SLOW REINFORCEMENT LEARNING - OpenAI
++ Reinforced Co-Training - William Yang Wang
++ Robust Distant Supervision Relation Extraction via Deep Reinforcement Learning - William Yang Wang
 #### Online Learning
 + A Reinforcement Learning Approach to Online Clustering - Aristidis Likas
 
@@ -186,6 +188,21 @@
 + Fine-tune BERT for Extractive Summarization - Yang Liu
 + Survey of the State of the Art in Natural Language Generation: Core tasks, applications and evaluation - Emiel Krahmer
 + ERNIE: Enhanced Representation through Knowledge Integration - Baidu
++ Evaluation: Statistical Machine Translation - Chapter 8
++ A Neural Probabilistic Language Model - Yoshua Bengio
++ A Tutorial on Bayesian Nonparametric Models - David M. Blei
++ Introduction to the Dirichlet Process - Billy Fang
++ Basics of Dirichlet processes - CS547Q Statistical Modeling with Stochastic Processes
++ Dirichlet Processes: Tutorial and Practical Course - UCL
++ NEURAL MACHINE TRANSLATION BY JOINTLY LEARNING TO ALIGN AND TRANSLATE - Yoshua Bengio
++ Effective Approaches to Attention-based Neural Machine Translation - Christopher D. Manning
++ Distributed Representations of Sentences and Documents - Google
++ Combining NLP Approaches for Rule Extraction from Legal Documents - Guido Governatori
++ EDISON: Feature Extraction for NLP, Simpliﬁed - Dan Roth
++ Understanding the Logical and Semantic Structure of Large Documents - Tim Finin
++ On Rule Extraction from Regulations - Wim PETERS
++ Chinese Zero Pronoun Resolution with Deep Memory Network - Harbin Institute of Technology
++ NON-AUTOREGRESSIVE NEURAL MACHINE TRANSLATION - Salesforce Research
 #### Knowledge Graph
 + Variational Knowledge Graph Reasoning - William Yang Wang
 + Probabilistic Embedding of Knowledge Graphs with Box Lattice Measures - Andrew McCallum
@@ -200,6 +217,9 @@
 + Mining Knowledge Graphs from Text - Sameer Singh
 + Survey of Markov Logic Networks - Dengdi Liu
 + 路径张量分解的知识图谱推理算法
++ DeepPath: A Reinforcement Learning Method for Knowledge Graph Reasoning - William Yang Wang
++ Deep Reinforcement Learning for NLP - William Yang Wang
++ Learning Deep Structured Semantic Models for Web Search using Clickthrough Data - Microsoft Research
 
 ### Graph Model
 + An exact mapping between the Variational Renormalization Group and Deep Learning - David J. Schwab
