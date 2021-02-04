@@ -2,7 +2,7 @@
 
 Following rules and guidelines are used for committing changes.
 
-    When creating commit message, follow these 7 rules (check this link for further explanation):
+    When creating commit message, follow these 7 rules (check https://chris.beams.io/posts/git-commit/#seven-rules for further explanation):
         Separate subject from body with a blank line.
         Limit the subject line to 50 characters.
         Capitalize the subject line.
@@ -18,7 +18,8 @@ Following rules and guidelines are used for committing changes.
         Reason: If there is a bug in code or unexpected behavior, we can easily go through the commit messages and filter only "relevant" changes.
 
     Do not commit personal settings or personal notes.
-        Reason: Sometimes it is hard to distinguish between needed changes and personal settings. Another reason is that your setting is probably not required by other teammates, all of them need to change that according to their preferences.
+        Reason: Sometimes it is hard to distinguish between needed changes and personal settings. 
+        Another reason is that your setting is probably not required by other teammates, all of them need to change that according to their preferences.
         Note: If you are using PyCharm for code versioning, you can simply create custom Change list - files moved to this change list are not committed by default.
 
 1.2. Branches
